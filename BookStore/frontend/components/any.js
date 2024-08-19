@@ -5,6 +5,7 @@ const any = () => {
     <div>
       <h1>Any</h1>
       <p>Any content</p>
+      <button> so ja</button>
     </div>
   );
 };
