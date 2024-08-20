@@ -77,6 +77,7 @@ app.delete("/books/:id", async (req, res) => {
     if (!result) {
       return res.status(404).send({ message: "Book not found" });
     }
+    return res.status(200).send({ message: "BBook deleted successfully" });
   } catch (error) {
     console.log(error.message);
     res.status(500).send({ message: error.message });
