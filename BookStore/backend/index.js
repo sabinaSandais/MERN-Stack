@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import { Book } from "./models/bookModel.js";
 
 const app = express();
+//Middleware to parse JSON
+app.use(express.json());
 
 app.get("/", (req, res) => {
   console.log(req);
@@ -11,7 +13,7 @@ app.get("/", (req, res) => {
 });
 //Route for saving a new book
 
-app.post("./books", async (req, res) => {
+app.post("/books", async (req, res) => {
   try {
     if (!req.body.title || !req.bbody.author || !req.body.publishYear) {
       return res
