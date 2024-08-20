@@ -18,6 +18,13 @@ app.post("./books", async (req, res) => {
         .status(400)
         .send({ message: "Send allrequired fields: title,author,publishYear" });
     }
+    const newBbook = {
+      title: req.body.title,
+      author: req.body.author,
+      publishYear: req.body.publishYear,
+    };
+    const book = await Book.create(newBbook);
+    return res.status(201).send(book);
   } catch (error) {
     console.log(error.message);
     res.status(500).send({ message: error.message });
