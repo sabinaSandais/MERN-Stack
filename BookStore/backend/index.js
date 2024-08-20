@@ -20,7 +20,7 @@ app.post("/books", async (req, res) => {
         .status(400)
         .send({ message: "Send allrequired fields: title,author,publishYear" });
     }
-    const newBbook = {
+    const newBook = {
       title: req.body.title,
       author: req.body.author,
       publishYear: req.body.publishYear,
