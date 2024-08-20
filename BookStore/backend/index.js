@@ -45,6 +45,19 @@ app.get("/books", async (req, res) => {
     res.status(500).send({ message: error.message });
   }
 });
+//Route for updating a single book
+app.put("/books/:id", async (req, res) => {
+  try {
+    if (!req.body.title || !req.body.author || !req.body.publishYear) {
+      return res.status(400).send({
+        message: "Send all required fields: title, author, publishYear",
+      });
+    }
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).send({ message: error.message });
+  }
+});
 
 mongoose
   .connect(mongoDBURL)
