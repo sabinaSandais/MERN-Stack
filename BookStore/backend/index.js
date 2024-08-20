@@ -25,7 +25,7 @@ app.post("/books", async (req, res) => {
       author: req.body.author,
       publishYear: req.body.publishYear,
     };
-    const book = await Book.create(newBbook);
+    const book = await Book.create(newBook);
     return res.status(201).send(book);
   } catch (error) {
     console.log(error.message);
