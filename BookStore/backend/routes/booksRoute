@@ -1,5 +1,6 @@
 import express from "express";
 import router from express.Router();
+import { Book } from "../models/bookModel.js";
 //Route for saving a new book
 
 router.post("/books", async (req, res) => {
