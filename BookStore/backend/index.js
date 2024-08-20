@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 app.post("/books", async (req, res) => {
   try {
-    if (!req.body.title || !req.bbody.author || !req.body.publishYear) {
+    if (!req.body.title || !req.body.author || !req.body.publishYear) {
       return res
         .status(400)
         .send({ message: "Send allrequired fields: title,author,publishYear" });
