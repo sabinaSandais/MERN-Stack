@@ -56,7 +56,7 @@ app.put("/books/:id", async (req, res) => {
 
     const { id } = req.params;
 
-    const result = await Book.findbyIdAndUpdate(id, req.body);
+    const result = await Book.findByIdAndUpdate(id, req.body);
 
     if (!result) {
       return res.status(404).send({ message: "Book not found" });
