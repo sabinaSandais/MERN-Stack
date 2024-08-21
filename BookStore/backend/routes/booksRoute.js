@@ -3,9 +3,10 @@ import express from "express";
 import { Book } from "../models/bookModel.js";
 
 const router = express.Router();
+
 //Route for saving a new book
 
-router.post("/books", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     if (!req.body.title || !req.body.author || !req.body.publishYear) {
       return res
