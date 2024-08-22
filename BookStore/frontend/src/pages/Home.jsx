@@ -23,7 +23,12 @@ const Home = () => {
         setLoading(false);
       });
   }, []);
-  return <div></div>;
+  return (
+    <div className="p-4">
+      <div className="flex justify-between items-center"> </div>
+      <h1 className="text-3xl my-8">books List</h1>
+    </div>
+  );
 };
 
 export default Home;
