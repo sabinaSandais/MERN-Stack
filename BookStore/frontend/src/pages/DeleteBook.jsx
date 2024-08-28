@@ -8,7 +8,7 @@ const DeleteBook = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
-  const handleDeleteBook = () => {};
+  const DeleteBook = () => {};
   return <div></div>;
 };
 
